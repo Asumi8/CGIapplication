@@ -12,6 +12,7 @@ server = WEBrick::HTTPServer.new({ #WEBrickインスタンス作成
 server.mount('/test', WEBrick::HTTPServlet::ERBHandler, 'test.html.erb')#Webサーバを起動した状態で、（DocumentRootの値）/testというURLを送信すると、同じディレクトリ階層にあるtest.html.erbファイルを表示する
 server.mount('/', WEBrick::HTTPServlet::ERBHandler, 'excercise.html.erb')
 
+
 server.mount('/indicate.cgi', WEBrick::HTTPServlet::CGIHandler, 'indicate.rb')
 
 server.mount('/goya.cgi', WEBrick::HTTPServlet::CGIHandler, 'goya.rb')
